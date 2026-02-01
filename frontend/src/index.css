@@ -1,0 +1,63 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --surface: #ffffff;
+  --surface-muted: #f1f5f9;
+  --ink: #0f172a;
+  --accent: #0f766e;
+  --accent-strong: #115e59;
+}
+
+body {
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(1200px circle at 10% -10%, #ccfbf1, transparent 60%),
+    radial-gradient(900px circle at 95% 5%, #dbeafe, transparent 55%),
+    #f8fafc;
+  min-height: 100vh;
+}
+
+input, textarea, button {
+  font: inherit;
+}
+
+@keyframes lift {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-fade {
+  animation: lift 0.6s ease-out both;
+}
+
+.stagger > * {
+  animation: lift 0.6s ease-out both;
+}
+
+.stagger > *:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.stagger > *:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.stagger > *:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.stagger > *:nth-child(4) {
+  animation-delay: 0.2s;
+}
